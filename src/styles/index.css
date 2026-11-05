@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Ethereal Twinkle Animation */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Floating Clove Butterflies */
+@keyframes float-butterfly {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translateY(-8px) rotate(3deg) scale(1.04);
+  }
+  66% {
+    transform: translateY(4px) rotate(-3deg) scale(0.97);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+/* Gentle Aura Pulse */
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.05);
+  }
+}
+
+/* Clove Purple & Pink Shimmer */
+@keyframes shimmer-clove {
+  0% {
+    border-color: rgba(243, 167, 210, 0.4);
+    box-shadow: 0 0 10px rgba(243, 167, 210, 0.2);
+  }
+  50% {
+    border-color: rgba(185, 155, 239, 0.9);
+    box-shadow: 0 0 18px rgba(185, 155, 239, 0.4);
+  }
+  100% {
+    border-color: rgba(243, 167, 210, 0.4);
+    box-shadow: 0 0 10px rgba(243, 167, 210, 0.2);
+  }
+}
+
+/* Fluttering Butterfly Wing */
+@keyframes flutterWing {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.65) scaleY(1.05);
+  }
+}
+
+/* Candle Flame Flicker */
+@keyframes flicker {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.98;
+  }
+  25% {
+    transform: scale(1.08, 0.94) rotate(-2deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.94, 1.06) rotate(1.5deg);
+    opacity: 0.92;
+  }
+  75% {
+    transform: scale(1.05, 0.97) rotate(-1deg);
+    opacity: 0.99;
+  }
+}
+
+/* Gentle Cake Sway */
+@keyframes gentleSway {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Animation Classes */
+.star-twinkle-1 { animation: twinkle 4s ease-in-out infinite; }
+.star-twinkle-2 { animation: twinkle 5.5s ease-in-out infinite 1.2s; }
+.star-twinkle-3 { animation: twinkle 3.8s ease-in-out infinite 0.7s; }
+.star-twinkle-4 { animation: twinkle 6s ease-in-out infinite 2s; }
+.pulse-glow { animation: gentle-pulse 6s ease-in-out infinite; }
+.butterfly-float { animation: float-butterfly 5s ease-in-out infinite; }
+.butterfly-float-delayed { animation: float-butterfly 6.5s ease-in-out infinite 2s; }
+.shimmer-active { animation: shimmer-clove 3.5s ease-in-out infinite; }
+.animate-float-slow { animation: floatSlow 6s ease-in-out infinite; }
+.animate-flutter { animation: flutterWing 2.8s ease-in-out infinite; }
+.flame-anim-1 { animation: flicker 2.1s ease-in-out infinite alternate; }
+.flame-anim-2 { animation: flicker 1.8s ease-in-out infinite alternate 0.25s; }
+.flame-anim-3 { animation: flicker 2.4s ease-in-out infinite alternate 0.5s; }
+.cake-float { animation: gentleSway 5s ease-in-out infinite; }

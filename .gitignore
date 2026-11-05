@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+scratch/
+stitch_export/
+stitch_a_world_made_for_you.zip
